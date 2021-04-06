@@ -6,7 +6,7 @@ show modal with jquery ajax after post
 you could use ajax and bootstrap modal, crate a general modal somewhere in your html page(I usually have it in my base.html so it will be included in all pages) then submit your from by using ajax then ajax will provide success or error function regarding the response will receive from server-side. put that message in the modal. an example is:
 
 somewhere inside base.html
- '''html
+ ```html
  
  <!-- Info General modal -->
     <div id="general_modal" class="modal fade " >
@@ -25,11 +25,11 @@ somewhere inside base.html
     <!-- /info General modal -->
     
     
-'''
+```
 
 js and ajax function
 
-''' js
+``` js
 $("#your-form").on('submit',function(e){
     e.preventDefault();
 var ajax_link = this.getAttribute("data-ajax-link");
@@ -62,11 +62,11 @@ $(target+" .modal-title").html(title);
 $(target+" .modal-dialog").removeClass().addClass("modal-dialog");
 $(target+" .modal-dialog").addClass(size);
 });
-'''
+```
 
 html form
 
-''' html
+``` html
 <form action="." method="post" id="your-form" class="btn btn-info  modal-ajax-load"
                         data-ajax-link="url"
                         data-toggle="modal"
@@ -74,4 +74,4 @@ html form
                         data-target="#general_modal">
                         
                         
-   '''
+  ```
